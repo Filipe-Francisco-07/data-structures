@@ -4,7 +4,31 @@ public class TesteLista {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+		Fila f1 = new Fila(3);
+		f1.inserir(4);
+		f1.inserir(7);
+		f1.inserir(1);
+		f1.inserir(3);
+		
+		f1.remover();
+		f1.remover();
+		f1.remover();
+		f1.remover();
+		
+	/*	
+		Pilha p1 = new Pilha(3);
+		p1.push(4);
+		p1.push(7);
+		p1.push(1);
+		p1.push(3);
+		System.out.println("topo = "+p1.getTopo());
+		p1.pop();
+		
+		System.out.println("topo = "+p1.getTopo());
+		
+		
+		
 		ListaEncadeada LE1 = new ListaEncadeada();
 		
 		LE1.inserirInicio(4);
@@ -30,7 +54,7 @@ public class TesteLista {
 		System.out.println(LC1.mostrarLista());
 		
 		LC1.contaDados();
-		
+		*/
 		
 
 	}
