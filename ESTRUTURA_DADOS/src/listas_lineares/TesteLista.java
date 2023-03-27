@@ -5,6 +5,32 @@ public class TesteLista {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Fila F_Par = new Fila(8);
+		
+		Fila F_Impar = new Fila(8);
+		
+		Fila F = new Fila(8);
+		
+		F.inserir(3);
+		F.inserir(4);
+		F.inserir(5);
+		F.inserir(10);
+		F.inserir(45);
+		F.inserir(32);
+		F.inserir(1);
+		F.inserir(50);
+		
+		F.separaFila(F,F_Par,F_Impar);
+		System.out.println("Ìmpares:");
+		while(!F_Impar.estaVazio()) {
+			System.out.println(F_Impar.remover());
+		}
+		System.out.println("Pares:");
+		while(!F_Par.estaVazio()) {
+			System.out.println(F_Par.remover());
+		}
+		
+	/*	
 		Fila f1 = new Fila(3);
 		f1.inserir(4);
 		f1.inserir(7);

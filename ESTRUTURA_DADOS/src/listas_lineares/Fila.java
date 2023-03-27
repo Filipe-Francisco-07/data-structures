@@ -38,14 +38,31 @@ public class Fila {
 			System.out.println("Fila cheia!");
 		}
 	}
-	public void remover() {
-		if(!estaVazio()) {
-			System.out.println("removido "+inicio.getDado());
-			inicio = inicio.getProx();
-			tamanho--;
-		}else {
-			System.out.println("A fila está vazia!");
-		
+	public Integer remover() {
+		if(estaVazio()) {
+			return null;
 		}
+		int valor = inicio.getDado();
+		inicio = inicio.getProx();
+		tamanho--;
+		if(estaVazio()) {
+			fim = null;
+		}
+		return valor;
 	}
+	
+	public void separaFila(Fila F,Fila F_Par,Fila F_Impar) {
+		
+		while(!F.estaVazio()) {
+			int num = F.remover();
+			if(num % 2 == 0) {
+				F_Par.inserir(num);
+			}else {
+				F_Impar.inserir(num);
+			}
+	
+		}
+		
+	}
+	
 }
