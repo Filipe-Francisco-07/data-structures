@@ -5,7 +5,7 @@ public class Main_hash {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		hashTable2 HashTable = new hashTable2(10);
+		hashTable3 HashTable = new hashTable3(6);
 		
 		HashTable.inserir("123.123.123-12", "Herbert Richards");
 		HashTable.inserir("777.666.777-66", "Tuezin");

@@ -34,5 +34,21 @@ public class hashTable3 {
 		}
 		array[indiceArray].inserirFinal(chave, valor);
 	}
+	
+	public String recuperar(String chave) {
+		int indiceArray = hash(chave);
+		if(array[indiceArray] == null) {
+			return"Chave não esta na tabela.";
+		}
+		
+		Nodo aux = array[indiceArray].getInicio();
+		while(aux!= null) {
+			if(aux.getChave() == chave) {
+				return aux.getValor();
+			}
+			aux = aux.getProx();
+		}
+		return"Chave não esta na tabela.";
+	}
 
 }
